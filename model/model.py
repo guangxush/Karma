@@ -4,6 +4,8 @@ from keras.layers.merge import concatenate
 from keras.layers import TimeDistributed, Input, Dense, Embedding, Conv1D, GlobalMaxPooling1D, Flatten
 from keras.models import Model
 from keras import optimizers
+from keras_bert import load_trained_model_from_checkpoint, Tokenizer
+import codecs
 
 
 def mlp(sourcevocabsize, targetvocabsize, word_W, input_seq_lenth, output_seq_lenth, emd_dim, sourcecharsize, char_W,
